@@ -26,7 +26,7 @@ Tchau!
 def send(csv_file_path="csv_mails.csv", hostname="smtp.meumail.com"):
     with open(csv_file_path, newline="") as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=",")
-        next(csv_reader)  # Skip the header row
+        next(csv_reader)
 
         smtp = smtplib.SMTP(hostname)
         smtp.ehlo()
